@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+*{
+   box-sizing: border-box;
+}
 body {  
+   display: flex;
+   flex-flow: column;
     background: #879957FF;
     margin: 0;
     position: relative;
@@ -8,12 +13,14 @@ body {
   }
   .navbar {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     background-color: #f8f9fa;
     width: 100%;
     margin: 0;
     height: 56px;
+    position: fixed;
+    top: 0px;
+    margin: 3px 5px;
   }
   
   .navbar #brand {
@@ -145,7 +152,7 @@ width: 100%;
     align-items: center;
     padding-bottom: 30px;
  } 
- #about_us h1{
+ h1{
     width: 238px; 
     height: 78px; 
     font-family: Catamaran; /* Body */
@@ -166,7 +173,7 @@ width: 100%;
  }
  footer{
     width: 100%; 
-  height: 407px; 
+  height: 100%; 
   background: #1E2128FF;
   border-radius: 0px;
   display: flex;
@@ -179,18 +186,20 @@ width: 100%;
  }
  footer label{
     width: 252px; 
-    height: 30px; 
+    height: 100%; 
     font-family: Catamaran; /* Body */
     font-size: 20px; 
     line-height: 30px; 
     font-weight: 600; 
-    color: #FFFFFFFF
+    color: #FFFFFFFF;
+    margin-top: 10px;
  }
  footer .email_input{
     width: 264px; 
     height: 44px; 
     padding-left: 44px; 
     padding-right: 16px; 
+    margin-top:10px ;
     font-family: Catamaran; 
     font-size: 16px; 
     line-height: 26px; 
@@ -206,6 +215,7 @@ width: 100%;
     width: 112px; 
   height: 47px; 
   padding: 0 16px; 
+  margin-top: 10px;
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -286,6 +296,231 @@ footer .socials{
     justify-content: end;
     gap: 10px;
 }
-footer .copyright{
-    
+#Contact_Us{
+   background-color: #FFFFFFFF;
+   display: flex;
+   justify-content: space-around ;
+   align-items: ;
+   padding-bottom: 30px;
+   /* padding-left: 105px; */
+}
+.container{
+   background-color: #FFFFFFFF;
+   display: flex;
+   flex-flow: column;
+   justify-self: center;
+   align-items: start;
+   padding-bottom: 30px;
+   
+}
+.container h1{
+   width: 450px;
+}
+.container p{
+   font-family: Catamaran;
+}
+form{
+   width: 50%;
+   display: flex;
+   flex-flow: column;
+   justify-content: start;
+   margin-top: 135px;
+
+}
+form .full_name{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   gap: 50px;
+}
+.full_name .last_name{
+   width: 50%;
+}
+.full_name .First_name{
+   width: 50%;
+}
+form label{
+   font-family: Catamaran; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 700;
+  margin-top: 15px;
+  
+}
+form input{
+   width: 100%; 
+   height: 52px; 
+   padding-left: 20px; 
+   padding-right: 20px; 
+   font-family: Catamaran; 
+   font-size: 18px; 
+   line-height: 28px; 
+   font-weight: 400; 
+   background: #F3F4F6FF; 
+   border-radius: 2px; 
+   border-width: 0px; 
+   outline: none;
+   opacity: 1;
+   
+}
+form input:hover{
+   color: #BDC1CAFF; 
+  background: #F3F4F6FF
+}
+form textarea{
+   opacity: 1;
+   width: 100%; 
+  height: 106px; 
+  padding-top: 12px; 
+  padding-bottom: 12px; 
+  padding-left: 16px; 
+  padding-right: 16px; 
+  font-family: Catamaran; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #BDC1CAFF;
+  background: #F3F4F6FF; 
+  border-radius: 2px; 
+  border-width: 0px;
+  outline: none;
+}
+form button{
+   width: 100%;
+   margin-top: 59px;
+}
+#gallery{
+   background-color: #FFFFFFFF;
+   padding-bottom: 40px;
+   height: 100%; 
+   display: flex;
+   flex-flow: column;
+
+}
+#gallery h1{
+   width: 100%;
+   text-align: center;
+   margin-top: 50px;
+
+}
+.items1,.items2{
+   display: flex;
+   justify-content: space-evenly;
+
+}
+
+.gallery_items .item{
+   display: flex;
+   width: 40%;
+   border-radius: 2px; 
+   border: 1px solid #cccccc;
+  box-shadow: 0px 0px 1px #a9bde0;
+  margin: 14px; 
+   padding: 10px;
+
+}
+.gallery_items .item:hover{
+   transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+
+} 
+.labeling{
+   display: flex;
+   flex-flow: column;
+   
+   
+
+}
+.labeling h2{
+   margin-bottom: 8px;
+   width: 173px; 
+  height: 30px; 
+  font-family: Catamaran; 
+  font-size: 20px; 
+  line-height: 30px; 
+  font-weight: 700; 
+  color: #171A1FFF;
+
+}
+.labeling P{
+   width: 100%; 
+  height: 100%; 
+  font-family: Catamaran; 
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 400; 
+  margin: 5px;
+  color: #9095A1FF
+}
+.item img{
+   width: 160px; 
+  height: 156px; 
+  border-radius: 2px;
+  margin: 16px;
+}
+#menu{
+   background-color: #FFFFFFFF;
+   padding-bottom: 40px;
+   height: 100%; 
+   display: flex;
+   align-items: center;
+   flex-flow: column;
+}
+.menu_items{
+   display: flex;
+   justify-content: space-evenly;
+   box-sizing: border-box;
+   max-width: 100%;
+}
+.menu1 .item,.menu2 .item{
+   display: flex;
+   justify-content:space-between;
+   border-radius: 2px; 
+   border: 1px solid #cccccc;
+  box-shadow: 0px 0px 1px #a9bde0;
+  margin: 20px;
+  padding: 10px;
+
+}
+.menu1,.menu2{
+   width: 50%;
+}
+.menu1 .item:hover{
+   transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+.menu2 .item:hover{
+   transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+#menu form button{
+   margin-top: 10px;
+}
+#booking{
+   background-color: #FFFFFFFF;
+   padding-bottom: 40px;
+   height: 100%; 
+   display: flex;
+   align-items: center;
+   flex-flow: column;
+}
+#booking h1{
+   width: 100%;
+   text-align: center;
+}
+#booking form{
+   margin-top: 0px;
+   gap: 5px;
+}
+#booking form button{
+   margin-top: 10px;
 }
