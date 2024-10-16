@@ -102,7 +102,7 @@ width: 100%;
 
  }
 
- #hero :first-child {
+ #hero h1 {
     margin-bottom: 0px;
     margin-top: 5%;
     margin-left: 5%; 
@@ -114,7 +114,7 @@ width: 100%;
     font-weight: 700; 
     color: #FFFFFFFF;
  }
- #hero :nth-child(3){
+ #hero p{
     margin-top: 0px;
     margin-left: 5%;
     width: 90vw; 
@@ -125,17 +125,17 @@ width: 100%;
   font-weight: 400; 
   color: #F3F4F6FF;
  }
- #hero button{
-    margin-top: 5%;
-    margin-left: 10%;
+ #hero a button{
+    margin-top: 20px;
+    margin-left: 38%;
     font-family: Catamaran; 
     font-size: 14px; 
     line-height: 22px; 
     font-weight: 400; 
     color: #FFFFFFFF; /* white */
     background: #879957FF;
-    width: 160px; 
-    height: 36px;
+    width: 200px; 
+    height: 100%;
     opacity: 1; 
     border: none; 
     border-radius: 3px;
