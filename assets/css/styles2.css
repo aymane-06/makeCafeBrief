@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #f8f9fa;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     height: 56px;
     position: fixed;
@@ -89,9 +89,9 @@ button:hover {
 width: 100%;
   }
  #hero{
-    background-image: url(../images/hero.png);
+    background-image: url(../images/hero.jpg);
     height: 100vh;
-    width: 100vw;
+    width: 90%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -105,9 +105,9 @@ width: 100%;
  #hero h1 {
     margin-bottom: 0px;
     margin-top: 5%;
-    margin-left: 5%; 
-    width: 100vw; 
-    height: 84px; 
+    padding-left: 5%; 
+    width: 100%; 
+    height: auto; 
     font-family: Catamaran;
     font-size: 64px; 
     line-height: 84px; 
@@ -118,7 +118,7 @@ width: 100%;
     margin-top: 0px;
     margin-left: 5%;
     width: 90vw; 
-  height: 36px; 
+  height: auto; 
   font-family: Catamaran; /* Body */
   font-size: 24px; 
   line-height: 36px; 
@@ -167,7 +167,7 @@ width: 100%;
     font-family: Catamaran;
  }
  #about_us img{
-    width: 1176px; 
+    width: 95%; 
   height: 592px; 
   border-radius: 10px 10px 10px 10px;
  }
@@ -267,7 +267,7 @@ width: 100%;
     transition: color 0.3s ease;
  }
 footer .devider{
-    width: 1176px; 
+    width: 100%; 
     height: 0px; 
     border-width: 1px; 
     border-color: #DEE1E6FF; /* neutral-300 */
@@ -524,3 +524,74 @@ form button{
 #booking form button{
    margin-top: 10px;
 }
+section{
+   min-width: 100%;
+   box-sizing: border-box;
+}
+.checked{
+   display: none;
+}
+@media (max-width:769px) {
+   .checked{
+      display: flex;
+   }
+   .berger_menu{
+      display: flex;
+      flex-flow: column;
+      gap: 6px;
+      width: max-content;
+      padding-right: 40px;
+      z-index: 2;
+      cursor: pointer;
+         
+      }
+      .berger_menu::before,
+      .berger_menu::after,
+      .berger_menu input{
+      content: "";
+      width: 60px;
+      height: 8px;
+      background-color: rgba(135, 153, 87, 0.568);
+      border-radius: 9999px;
+      transition: opacity 200ms ease-in-out;
+      
+      
+      }
+      .berger_menu input{
+         appearance: none;
+         padding: 0;
+         margin: 0;
+         outline: none;
+         pointer-events: none;
+      }
+      .berger_menu:has(input:checked)::before,
+      .berger_menu:has(input:checked)::after,
+      .berger_menu input:checked{
+         background-color: #879957FF;
+      
+      
+      }
+      .sidebar{
+         transition: translate 200ms ease-in-out;
+         translate: 0%;
+         position: absolute;
+         top:-44px;
+         right: 5px;
+         padding: 0.5rem 1rem;
+         margin-top: 100px;
+         background-color: rgb(255, 255, 255);
+         max-width: 15rem;
+         min-height: 100vh;
+         display: flex;
+         flex-flow: column;
+         align-items: center;
+        
+      }
+      .berger_menu:has(input:checked) + .sidebar{
+         translate: 100%;
+      }
+      .unchecked{
+         display: none !important;
+      }
+}
+
