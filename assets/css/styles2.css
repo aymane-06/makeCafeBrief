@@ -548,7 +548,7 @@ section{
    box-sizing: border-box;
 }
 .checked{
-   display: none;
+   display: none ;
 }
 @media (max-width:769px) {
    .checked{
@@ -569,8 +569,8 @@ section{
       .berger_menu input{
       content: "";
       width: 60px;
-      height: 8px;
-      background-color: rgba(135, 153, 87, 0.568);
+      height: 4px;
+      background-color: #879957FF;
       border-radius: 9999px;
       transition: opacity 200ms ease-in-out;
       
@@ -586,13 +586,13 @@ section{
       .berger_menu:has(input:checked)::before,
       .berger_menu:has(input:checked)::after,
       .berger_menu input:checked{
-         background-color: #879957FF;
+         background-color: rgba(135, 153, 87, 0.568);
       
       
       }
       .sidebar{
          transition: translate 200ms ease-in-out;
-         translate: 0%;
+         translate: 100% ;
          position: fixed;
          top:-44px;
          right: 0px;
@@ -609,7 +609,7 @@ section{
         
       }
       .berger_menu:has(input:checked) + .sidebar{
-         translate: 100%;
+         translate: 0%;
       }
       .unchecked{
          display: none !important;
