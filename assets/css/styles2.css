@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 *{
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
 }
 body {  
    display: flex;
@@ -41,7 +44,8 @@ body {
   .navbar ul {
     display: flex;
     list-style: none;
-    margin-left: 0px;
+    align-items: center;
+    margin-left: 24px;
   }
   
   .navbar ul li {
@@ -254,6 +258,7 @@ width: 100%;
     gap: 40px;
     /* justify-content: center; */
     padding-left: 50px ;
+    flex-wrap: wrap;
  }
  footer a{
     color: #FFFFFFFF;
@@ -302,7 +307,9 @@ footer .socials{
    justify-content: space-around ;
    align-items: ;
    padding-bottom: 30px;
-   /* padding-left: 105px; */
+   flex-wrap: wrap;
+   width: 100%;
+
 }
 .container{
    background-color: #FFFFFFFF;
@@ -311,10 +318,15 @@ footer .socials{
    justify-self: center;
    align-items: start;
    padding-bottom: 30px;
+   margin-top: 50px;
+   width: 100%;
    
 }
 .container h1{
-   width: 450px;
+   width: 100%;
+}
+.container iframe{
+   width: 100%;
 }
 .container p{
    font-family: Catamaran;
@@ -405,13 +417,15 @@ form button{
 }
 .items1,.items2{
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
+  
 
 }
 
 .gallery_items .item{
    display: flex;
-   width: 40%;
+   justify-content: space-between;
+   width: 52%;
    border-radius: 2px; 
    border: 1px solid #cccccc;
   box-shadow: 0px 0px 1px #a9bde0;
@@ -468,12 +482,15 @@ form button{
    display: flex;
    align-items: center;
    flex-flow: column;
+   margin-top: 50px;
 }
 .menu_items{
    display: flex;
    justify-content: space-evenly;
    box-sizing: border-box;
    max-width: 100%;
+   gap: 20px;
+
 }
 .menu1 .item,.menu2 .item{
    display: flex;
@@ -481,8 +498,10 @@ form button{
    border-radius: 2px; 
    border: 1px solid #cccccc;
   box-shadow: 0px 0px 1px #a9bde0;
-  margin: 20px;
+  
   padding: 10px;
+
+  
 
 }
 .menu1,.menu2{
@@ -574,16 +593,18 @@ section{
       .sidebar{
          transition: translate 200ms ease-in-out;
          translate: 0%;
-         position: absolute;
+         position: fixed;
          top:-44px;
-         right: 5px;
+         right: 0px;
          padding: 0.5rem 1rem;
          margin-top: 100px;
          background-color: rgb(255, 255, 255);
          max-width: 15rem;
-         min-height: 100vh;
+         min-height: 100%;
          display: flex;
          flex-flow: column;
+         gap:5px;
+         font-family:Catamaran ;
          align-items: center;
         
       }
@@ -593,5 +614,30 @@ section{
       .unchecked{
          display: none !important;
       }
-}
+      #Contact_Us,#gallery,.items1,.items2,{
+         flex-wrap: wrap;
+      }
+      .menu_items{
+         display: block;
+      }
+      .menu1 .item,.menu2 .item{
+         width: 90vw;
+      }
+      .items1,.items2{
+         flex-wrap: wrap;
+         
+      }
+      .item{
+         width: 100vw !important;
 
+      }
+      .gallery_items .item {
+         margin: 0;
+      }
+}
+@media (max-width:1230px) {
+   .items1, .items2{
+      display: block;
+   }
+   
+}
