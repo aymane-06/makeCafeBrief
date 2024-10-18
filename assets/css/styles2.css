@@ -533,6 +533,7 @@ form button{
    flex-flow: column;
 }
 #booking h1{
+   margin-top: 15%;
    width: 100%;
    text-align: center;
 }
