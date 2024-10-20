@@ -642,6 +642,9 @@ section{
       .full_name{
          display: block !important;
       }
+      form{
+         width: 90vw;
+      }
 }
 @media (max-width:1230px) {
    .items1, .items2{
